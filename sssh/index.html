@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Sharpening and Sparsifying with Surface Hessians</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/noscript.css" />
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/images/cheeseman_favicon.ico"/> -->
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1><em>Sharpening and Sparsifying with Surface Hessians</em></h1>
+								<p class="venue">SIGGRAPH Asia 2024</p>
+
+								<p><span class="authorname">Dylan Rowe</span>, <span class="institution">University of Southern California</span></p>
+								<p><span class="authorname">Alec Jacobson</span>, <span class="institution">University of Toronto and Adobe Research Toronto</span></p>
+								<p><span class="authorname">Oded Stein</span>, <span class="institution">University of Southern California</span></p>
+							</header>
+
+							<section class="teaser">
+								<figure>
+									<img src="./img/teaser_web.png"/>
+									<figcaption><span class="emph">Figure 1.</span>
+										Our intrinsic L1 smoothness energy constructs piecewise smooth functions.  Unlike L2 energies, which fit a smooth function without any ridges to solve an interpolation problem (and thus have to hallucinate a saddle), we construct a piecewise flat function (left).  When denoising, our discetization produces clean isolines compared to previous, non-intrinsic approaches (center).  Our L1 energy can construct sparse cut indicator functions to segment meshes (right).</figcaption>
+								</figure>
+							</section>
+
+							<section class="abstract">
+								<h2>Abstract</h2>
+								<p>The L1 Hessian energy measures the norm of the Hessian of a function on a surface (and NOT the squared norm, as is common with many geometry applications that employ L2). Its minimizers tend to be locally linear with a sparse set of curved ridges. We introduce a fully-intrinsic discretization of this energy for triangle meshes and show that it can be optimized using off-the-shelf conic program solvers. We apply it to stylization, denoising, interpolation, hole-filling, and segmentation tasks. Our L1 approach exhibits multiple important differences from its more-familiar L2 counterpart: it preserves ridge-like features in the input, it naturally incorporates a flatness prior for reconstruction, and, at its extreme, it distills its input to an abstract, angular form.
+								</p>
+							</section>
+
+							<section class="links">
+								<h2>Links</h2>
+								<ul>
+								<li><a href="https://www.google.com">ACM Library</a></li>
+							    	<li><a href="./data/l1_hessians_opt.pdf">Paper</a></li>
+									<li><a href="./data/supplemental.zip">Supplemental Material</a></li>
+							    	<li><a href="https://github.com/d-r-o-w-e/sssh">Code</a></li>
+							    </ul>
+							</section>
+
+							<!-- <section class="comments">
+								<h2>Comments</h2>
+								<p></p>
+							</section> -->
+
+							<!-- <section class="video">
+								<h2>Video</h2>
+							</section> -->
+
+							<section class="bib">
+								<h2>Cite as</h2>
+									<pre><code>@inproceedings{1234}</code></pre>
+							</section> 
+
+							<section class="acknowledgements">
+								<h2>Acknowledgements</h2>
+								<p>Our research is funded in part by NSERC Discovery (RGPIN–2022–04680), the Ontario Early Research Award program, the Canada Research Chairs Program, a Sloan Research Fellowship, the DSI Catalyst Grant program and gifts by Adobe Inc. </p>
+								
+								<p>We thank Silvia Sellán and Yuta Noma for proofreading.</p>
+								
+								<p>We acknowledge and thank the authors of the 2D and 3D assets used in this project.  Please see the paper for more details.</p> 
+							</section>
+						</div>
+					</div>
+
+			</div>
+
+	</body>
+</html>
